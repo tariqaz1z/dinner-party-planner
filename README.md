@@ -49,4 +49,4 @@ All data is fictional and stored in `localStorage` (key `crumb-v1`). Profile →
 - Data is local to one browser, so the "share link" only opens in the browser that created the dinner. A backend is the next step.
 - Calendar availability is generated from a seeded formula (Friday and Saturday evenings are open; weekdays are busy), not a real calendar integration.
 - Notifications are local; nothing is actually sent.
-- Recipe photos are emoji illustrations and the video guide link opens a YouTube search.
+- Recipes, profile avatars, and welcome-screen objects use locally bundled generated artwork. Full prompts and asset provenance are in `src/assets/illustrations/PROMPTS.md`. The video guide link opens a YouTube search.

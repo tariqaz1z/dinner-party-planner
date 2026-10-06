@@ -25,7 +25,7 @@ export interface Recipe {
   id: string;
   name: string;
   tagline: string;
-  emoji: string;
+  image: string;
   hue: number;
   effort: number;
   minutes: number;

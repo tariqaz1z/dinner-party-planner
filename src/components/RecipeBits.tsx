@@ -9,11 +9,9 @@ export function Plate({ recipe, size = 120 }: { recipe: Recipe; size?: number })
   return (
     <span
       className="plate"
-      role="img"
-      aria-label={`Illustration of ${recipe.name}`}
-      style={{ width: size, height: size, fontSize: size * 0.5, background: `linear-gradient(135deg, hsl(${recipe.hue} 90% 85%), hsl(${(recipe.hue + 40) % 360} 90% 80%))` }}
+      style={{ width: size, height: size, background: `linear-gradient(135deg, hsl(${recipe.hue} 90% 85%), hsl(${(recipe.hue + 40) % 360} 90% 80%))` }}
     >
-      <span aria-hidden="true">{recipe.emoji}</span>
+      <img src={recipe.image} alt={`Illustration of ${recipe.name}`} width={size} height={size} loading={size < 120 ? "lazy" : "eager"} decoding="async" />
     </span>
   );
 }
